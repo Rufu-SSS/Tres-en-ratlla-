@@ -18,5 +18,19 @@
     <ClCompile Include="Tres en ratlla.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="alumne1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="alumne2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="alumne1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="alumne2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
