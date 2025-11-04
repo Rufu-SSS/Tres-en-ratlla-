@@ -16,7 +16,6 @@ string Alumne2::getNom() const { return nom; }
 char Alumne2::getSimbol() const { return simbol; }
 int Alumne2::getVictories() const { return victories; }
 void Alumne2::incrementarVictories() { victories++; }
-// Versió manual (pots canviar a IA si vols)
 int Alumne2::triarMoviment() const {
     int pos;
     cout << nom << " (" << simbol << "), tria una posició (0-8): ";

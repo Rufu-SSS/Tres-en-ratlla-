@@ -20,10 +20,7 @@ public:
         tornActual = alumne1->getSimbol();
     }
 
-    void inicialitzarTauler() {
-        tauler = vector<char>(9, ' ');
-    }
-
+    void inicialitzarTauler() { tauler = vector<char>(9, ' '); }
     void imprimirTauler() const {
         cout << "\n";
         cout << " " << tauler[0] << " | " << tauler[1] << " | " << tauler[2] << endl;
@@ -33,17 +30,12 @@ public:
         cout << " " << tauler[6] << " | " << tauler[7] << " | " << tauler[8] << endl;
         cout << "\n";
     }
-
-    bool esMovimentValid(int pos) const {
-        return (pos >= 0 && pos < 9 && tauler[pos] == ' ');
-    }
-
+    bool esMovimentValid(int pos) const { return (pos >= 0 && pos < 9 && tauler[pos] == ' '); }
     void ferMoviment(int pos) {
         if (!esMovimentValid(pos))
             throw invalid_argument(" Posició no vàlida!");
         tauler[pos] = tornActual;
     }
-
     bool comprovarGuanyador() const {
         char s = tornActual;
 
@@ -61,13 +53,11 @@ public:
 
         return false;
     }
-
     bool esTaulerPle() const {
         for (char c : tauler)
             if (c == ' ') return false;
         return true;
     }
-
     void canviarTorn() {
         tornActual = (tornActual == alumne1->getSimbol()) ? alumne2->getSimbol() : alumne1->getSimbol();
     }
@@ -77,40 +67,19 @@ public:
         while (true) {
             imprimirTauler();
 
-            if (tornActual == alumne1->getSimbol())
-                pos = alumne1->triarMoviment();
-            else
-                pos = alumne2->triarMoviment();
-
-            try {
-                ferMoviment(pos);
-
-                if (comprovarGuanyador()) {
-                    imprimirTauler();
+            if (tornActual == alumne1->getSimbol()) { pos = alumne1->triarMoviment(); }
+            else { pos = alumne2->triarMoviment(); }
+            try { ferMoviment(pos);
+                if (comprovarGuanyador()) { imprimirTauler();
                     if (tornActual == alumne1->getSimbol()) {
                         cout << " " << alumne1->getNom() << " ha guanyat!\n";
-                        alumne1->incrementarVictories();
-                    }
-                    else {
-                        cout << " " << alumne2->getNom() << " ha guanyat!\n";
-                        alumne2->incrementarVictories();
-                    }
-                    break;
-                }
-
-                if (esTaulerPle()) {
-                    imprimirTauler();
-                    cout << " Empat!\n";
-                    break;
-                }
-
-                canviarTorn();
-            }
-            catch (const invalid_argument& e) {
-                cout << e.what() << endl;
-            }
-        }
-    }
+                        alumne1->incrementarVictories(); }
+                    else { cout << " " << alumne2->getNom() << " ha guanyat!\n";
+                        alumne2->incrementarVictories(); }
+                    break; }
+                if (esTaulerPle()) { imprimirTauler(); cout << " Empat!\n"; break; }
+                canviarTorn(); }
+            catch (const invalid_argument& e) { cout << e.what() << endl; } } } 
 };
 
 // ---------- MAIN ----------
@@ -131,5 +100,10 @@ int main() {
     cout << a1.getNom() << " victòries: " << a1.getVictories() << endl;
     cout << a2.getNom() << " victòries: " << a2.getVictories() << endl;
 
+    if (a1.getVictories() > a2.getVictories()) {
+        cout << "El jugador " << a1.getNom() << " ha guanyat més partides que el jugador " << a2.getNom(); }
+    else {
+        cout << "El jugador " << a2.getNom() << " ha guanyat més partides que el jugador " << a1.getNom();
+    }
     return 0;
 }

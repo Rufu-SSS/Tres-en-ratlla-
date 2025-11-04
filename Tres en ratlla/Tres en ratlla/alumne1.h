@@ -5,7 +5,7 @@
 using namespace std;
 class Alumne1 {
 private:
-     string nom;
+    string nom;
     char simbol;
     int victories;
 
