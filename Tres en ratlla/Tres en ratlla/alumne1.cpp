@@ -8,11 +8,11 @@ Alumne1::Alumne1(string nom) {
     this->simbol = 'X';
     this->victories = 0;
 }
-string Alumne1::getNom() const { return nom; }
-char Alumne1::getSimbol() const { return simbol; }
-int Alumne1::getVictories() const { return victories; }
-void Alumne1::incrementarVictories() { victories++; }
-int Alumne1::triarMoviment() const {
+string Alumne1::getNomJug1() const { return nom; }
+char Alumne1::getSimbolJug1() const { return simbol; }
+int Alumne1::getVictoriesJug1() const { return victories; }
+void Alumne1::incrementarVictoriesJug1() { victories++; }
+int Alumne1::triarMovimentJug1() const {
     int pos;
     cout << nom << " (" << simbol << "), tria una posició (0-8): ";
     cin >> pos;

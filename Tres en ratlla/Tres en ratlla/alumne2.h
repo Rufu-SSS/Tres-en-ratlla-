@@ -11,11 +11,11 @@ private:
 
 public:
     Alumne2( string nom);
-     string getNom() const;
-    char getSimbol() const;
-    int getVictories() const;
-    void incrementarVictories();
-    int triarMoviment() const; // pot ser jugador o IA
+     string getNomJug2() const;
+    char getSimbolJug2() const;
+    int getVictoriesJug2() const;
+    void incrementarVictoriesJug2();
+    int triarMovimentJug2() const;
 };
 
 #endif

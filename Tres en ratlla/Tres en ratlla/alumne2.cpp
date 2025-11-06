@@ -12,11 +12,11 @@ Alumne2::Alumne2(string nom) {
     srand(time(nullptr));
 }
 
-string Alumne2::getNom() const { return nom; }
-char Alumne2::getSimbol() const { return simbol; }
-int Alumne2::getVictories() const { return victories; }
-void Alumne2::incrementarVictories() { victories++; }
-int Alumne2::triarMoviment() const {
+string Alumne2::getNomJug2() const { return nom; }
+char Alumne2::getSimbolJug2() const { return simbol; }
+int Alumne2::getVictoriesJug2() const { return victories; }
+void Alumne2::incrementarVictoriesJug2() { victories++; }
+int Alumne2::triarMovimentJug2() const {
     int pos;
     cout << nom << " (" << simbol << "), tria una posició (0-8): ";
     cin >> pos;
