@@ -56,11 +56,11 @@ PROGRAMA: Tres en Ratlla
 │   -- triarMovimentJug1()  
 │  
 -- CLASSE ALUMNE2  
-    -- getNomJug2()  
-    -- getSimbolJug2()  
-    -- getVictoriesJug2()  
-    -- incrementarVictoriesJug2()  
-    -- triarMovimentJug2()  
+       -- getNomJug2()  
+       -- getSimbolJug2()  
+       -- getVictoriesJug2()  
+       -- incrementarVictoriesJug2()  
+       -- triarMovimentJug2()  
 
 ---
 
